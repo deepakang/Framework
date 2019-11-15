@@ -12,11 +12,17 @@ public class BrowserFactory {
 
 	public static WebDriver startApplication(WebDriver driver,String browserName,String appURL)
 	{
-		if(browserName.equals("Chrome"))
+		/*if(browserName.equals("Chrome"))
 		{
 			System.setProperty("webdriver.chrome.driver","./Drivers/chromedriver.exe");
 			driver=new ChromeDriver();
 			
+		}*/
+		
+		if(browserName.equals("Firefox"))
+		{
+			System.setProperty("webdriver.gecko.driver","./Drivers/geckodriver.exe");
+			driver=new FirefoxDriver();
 		}
 		else if(browserName.equals("Firefox"))
 		{

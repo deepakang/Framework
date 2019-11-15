@@ -48,9 +48,10 @@ public class BaseClass {
 		Reporter.log("Setting Done- Test can be started", true);
 	}
 
-	@Parameters({"browser","urlToBeTested"})
+	@Parameters({"browser","urlNeedsToBeTested"})
+	
 	@BeforeClass
-	public void setup(String browser,String url) 
+	public void setup(String browser, String url) 
 	{
 		
 		Reporter.log("Trying to start Browser and Getting application ready", true);
